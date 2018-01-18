@@ -12,8 +12,8 @@ class SerpentTetrisBattleFBGame(Game, metaclass=Singleton):
     def __init__(self, **kwargs):
         kwargs["platform"] = "web_browser"
         kwargs["browser"] = WebBrowser.CHROME
-        kwargs["window_name"] = "Tetris Battle on Facebook - Google Chrome"
-        kwargs["url"] = "https://apps.facebook.com/tetris_battle/"
+        kwargs["window_name"] = "Play Tetris | Free Online Game | Tetris"
+        kwargs["url"] = "https://tetris.com/play-tetris"
 
         super().__init__(**kwargs)
 
@@ -23,7 +23,7 @@ class SerpentTetrisBattleFBGame(Game, metaclass=Singleton):
     @property
     def screen_regions(self):
         regions = {
-            "SAMPLE_REGION": (0, 0, 0, 0)
+            "MAIN_MENU": (277, 489, 922, 1355)
         }
 
         return regions
