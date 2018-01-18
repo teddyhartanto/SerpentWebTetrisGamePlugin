@@ -23,7 +23,12 @@ class SerpentTetrisBattleFBGame(Game, metaclass=Singleton):
     @property
     def screen_regions(self):
         regions = {
-            "MAIN_MENU": (277, 489, 922, 1355)
+            "HOLD": (376, 569, 468, 707),
+            "SCORE": (686, 572, 718, 704),
+            "LEVEL": (752, 572, 784, 704),
+            "LINES": (818, 571, 850, 705),
+            "NEXT": (377, 1136, 614, 1271),
+            "PLAY": (310, 773, 890, 1070)
         }
 
         return regions
