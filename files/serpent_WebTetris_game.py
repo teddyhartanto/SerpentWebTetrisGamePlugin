@@ -1,23 +1,23 @@
 from serpent.game import Game
 
-from .api.api import TetrisBattleFBAPI
+from .api.api import WebTetrisAPI
 
 from serpent.utilities import Singleton
 
 from serpent.game_launchers.web_browser_game_launcher import WebBrowser
 
 
-class SerpentTetrisBattleFBGame(Game, metaclass=Singleton):
+class SerpentWebTetrisGame(Game, metaclass=Singleton):
 
     def __init__(self, **kwargs):
         kwargs["platform"] = "web_browser"
-        kwargs["browser"] = WebBrowser.CHROME
+        kwargs["browser"] = WebBrowser.DEFAULT
         kwargs["window_name"] = "Play Tetris | Free Online Game | Tetris"
         kwargs["url"] = "https://tetris.com/play-tetris"
 
         super().__init__(**kwargs)
 
-        self.api_class = TetrisBattleFBAPI
+        self.api_class = WebTetrisAPI
         self.api_instance = None
 
     @property
@@ -28,7 +28,14 @@ class SerpentTetrisBattleFBGame(Game, metaclass=Singleton):
             "LEVEL": (752, 572, 784, 704),
             "LINES": (818, 571, 850, 705),
             "NEXT": (377, 1136, 614, 1271),
-            "PLAY": (310, 773, 890, 1070)
+            "PLAY_BUTTON": (519, 824, 559, 1017),
+            "SELECT_LEVEL_BUTTON": (587, 834, 617, 1004),
+            "PLAY": (310, 773, 890, 1070),
+            "HIGH_SCORE": (255, 389, 281, 532),
+            "ENTER_INITIALS": (304, 422, 326, 498),
+            "HIGH_SCORE_OK": (339, 438, 358, 482),
+            "HOME_BUTTON": (345, 420, 365, 452),
+            "RETRY_BUTTON": (345, 467, 365, 498)
         }
 
         return regions

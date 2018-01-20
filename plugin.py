@@ -1,14 +1,14 @@
 import offshoot
 
 
-class SerpentTetrisBattleFBGamePlugin(offshoot.Plugin):
-    name = "SerpentTetrisBattleFBGamePlugin"
+class SerpentWebTetrisGamePlugin(offshoot.Plugin):
+    name = "SerpentWebTetrisGamePlugin"
     version = "0.1.0"
 
     libraries = []
 
     files = [
-        {"path": "serpent_TetrisBattleFB_game.py", "pluggable": "Game"}
+        {"path": "serpent_WebTetris_game.py", "pluggable": "Game"}
     ]
 
     config = {
@@ -25,4 +25,4 @@ class SerpentTetrisBattleFBGamePlugin(offshoot.Plugin):
 
 
 if __name__ == "__main__":
-    offshoot.executable_hook(SerpentTetrisBattleFBGamePlugin)
+    offshoot.executable_hook(SerpentWebTetrisGamePlugin)

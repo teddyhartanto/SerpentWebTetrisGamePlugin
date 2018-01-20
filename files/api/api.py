@@ -1,7 +1,7 @@
 from serpent.game_api import GameAPI
 
 
-class TetrisBattleFBAPI(GameAPI):
+class WebTetrisAPI(GameAPI):
 
     def __init__(self, game=None):
         super().__init__(game=game)
@@ -13,4 +13,4 @@ class TetrisBattleFBAPI(GameAPI):
 
         @classmethod
         def my_namespaced_api_function(cls):
-            api = TetrisBattleFBAPI.instance
+            api = WebTetrisAPI.instance

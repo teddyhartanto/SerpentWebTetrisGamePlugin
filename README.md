@@ -1,2 +1,2 @@
-# SerpentTetrisBattleFBGamePlugin
-A Serpent game plugin for Tetris Battle on Facebook using Google Chrome
+# SerpentWebTetrisGamePlugin
+A Serpent game plugin for web-based Tetris
