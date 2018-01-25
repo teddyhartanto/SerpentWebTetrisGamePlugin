@@ -18,10 +18,11 @@ class SerpentWebTetrisGame(Game, metaclass=Singleton):
         super().__init__(**kwargs)
 
         self.api_class = WebTetrisAPI
-        self.api_instance = None
+        self.api_instance = None  # Will be instantiated, it's a singleton. Just call the property api
 
     @property
     def screen_regions(self):
+        # TODO: [Low priority] make the names more generic?
         regions = {
             "MAIN_MENU_PLAY_BUTTON": (519, 824, 559, 1017),
             "MAIN_MENU_SELECT_LEVEL_BUTTON": (587, 834, 617, 1004),
@@ -30,11 +31,11 @@ class SerpentWebTetrisGame(Game, metaclass=Singleton):
             "LEVEL": (752, 572, 784, 704),
             "LINES": (818, 571, 850, 705),
             "NEXT": (377, 1136, 614, 1271),
-            "BOARD": (310, 773, 890, 1070), # mainly for play game context
+            "BOARD": (310, 773, 890, 1070),  # mainly for play game context
             "HI_SCORE": (255, 389, 281, 532),
             "HI_SCORE_ENTER_INITIALS": (304, 422, 326, 498),
             "HI_SCORE_OK": (339, 438, 358, 482),
-            "GAME_OVER_HOME_BUTTON": (345, 420, 365, 452),
+            "GAME_OVER_MAIN_MENU_BUTTON": (345, 420, 365, 452),
             "GAME_OVER_RETRY_BUTTON": (345, 467, 365, 498)
         }
 
