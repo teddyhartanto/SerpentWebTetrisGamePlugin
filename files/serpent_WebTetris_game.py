@@ -23,19 +23,19 @@ class SerpentWebTetrisGame(Game, metaclass=Singleton):
     @property
     def screen_regions(self):
         regions = {
+            "MAIN_MENU_PLAY_BUTTON": (519, 824, 559, 1017),
+            "MAIN_MENU_SELECT_LEVEL_BUTTON": (587, 834, 617, 1004),
             "HOLD": (376, 569, 468, 707),
             "SCORE": (686, 572, 718, 704),
             "LEVEL": (752, 572, 784, 704),
             "LINES": (818, 571, 850, 705),
             "NEXT": (377, 1136, 614, 1271),
-            "PLAY_BUTTON": (519, 824, 559, 1017),
-            "SELECT_LEVEL_BUTTON": (587, 834, 617, 1004),
-            "PLAY": (310, 773, 890, 1070),
-            "HIGH_SCORE": (255, 389, 281, 532),
-            "ENTER_INITIALS": (304, 422, 326, 498),
-            "HIGH_SCORE_OK": (339, 438, 358, 482),
-            "HOME_BUTTON": (345, 420, 365, 452),
-            "RETRY_BUTTON": (345, 467, 365, 498)
+            "BOARD": (310, 773, 890, 1070), # mainly for play game context
+            "HI_SCORE": (255, 389, 281, 532),
+            "HI_SCORE_ENTER_INITIALS": (304, 422, 326, 498),
+            "HI_SCORE_OK": (339, 438, 358, 482),
+            "GAME_OVER_HOME_BUTTON": (345, 420, 365, 452),
+            "GAME_OVER_RETRY_BUTTON": (345, 467, 365, 498)
         }
 
         return regions
